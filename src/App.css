@@ -10,8 +10,8 @@
 
 .quiz-panel {
   width: min(920px, 100%);
-  background: rgba(9, 12, 24, 0.86);
-  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: linear-gradient(180deg, rgba(9, 48, 30, 0.92), rgba(8, 33, 22, 0.9));
+  border: 1px solid rgba(74, 222, 128, 0.18);
   border-radius: 24px;
   box-shadow:
     0 30px 60px rgba(15, 23, 42, 0.45),
@@ -39,16 +39,16 @@
   text-transform: uppercase;
   letter-spacing: 0.32em;
   font-size: 0.75rem;
-  color: #8b5cf6;
+  color: #86efac;
 }
 
 .score-pill {
-  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  background: linear-gradient(135deg, #16a34a, #22c55e);
   min-width: 96px;
   text-align: center;
   border-radius: 999px;
   padding: 12px 16px;
-  color: #eef2ff;
+  color: #eefbf2;
 }
 
 .score-pill span {
@@ -82,7 +82,7 @@
 .progress-bar span {
   display: block;
   height: 100%;
-  background: linear-gradient(90deg, #8b5cf6, #22d3ee);
+  background: linear-gradient(90deg, #16a34a, #86efac);
   transition: width 0.25s ease;
 }
 
@@ -107,8 +107,8 @@
 .question-card,
 .explanation-card,
 .results-card {
-  background: linear-gradient(180deg, #0f172a, #111827);
-  border: 1px solid rgba(148, 163, 184, 0.1);
+  background: linear-gradient(180deg, #0d3b2a, #0f7a46);
+  border: 1px solid rgba(134, 239, 172, 0.18);
   border-radius: 18px;
   padding: 24px;
 }
@@ -166,7 +166,7 @@
 .next-button,
 .restart-button {
   border: none;
-  background: linear-gradient(90deg, #8b5cf6, #2563eb);
+  background: linear-gradient(90deg, #16a34a, #22c55e);
   color: white;
   font: inherit;
   font-weight: 600;
@@ -191,7 +191,7 @@
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: conic-gradient(#8b5cf6 0deg, #8b5cf6 0deg, #1e293b 0deg);
+  background: conic-gradient(#16a34a 0deg, #22c55e 0deg, #1e293b 0deg);
   position: relative;
 }
 
