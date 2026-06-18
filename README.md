@@ -1,16 +1,35 @@
-# React + Vite
+# Quiz Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React quiz application that loads questions from a local API, keeps score, shows a countdown timer, and displays explanations after each answer.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Multiple-choice quiz questions
+- Score tracking for correct answers
+- Countdown timer for each question
+- Explanation panel after answering
+- Restart option to play again
 
-## React Compiler
+## Project setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. The app expects the backend API to run alongside it, so make sure the server script is available when you launch the project.
 
-## Expanding the ESLint configuration
+## Scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `npm run dev` — start the frontend development server
+- `npm run build` — create a production build
+- `npm run preview` — preview the production build locally
+
+## Notes
+
+- The quiz data is fetched from `/api/questions`.
+- The app includes a fallback question set if the API request fails.
+- Styling and layout are handled in the React components and CSS files in the `src` folder.
