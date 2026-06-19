@@ -155,8 +155,9 @@ function App() {
     [currentQuestion, showExplanation, totalQuestions],
   )
   const percentage = totalQuestions === 0 ? 0 : Math.round((score / totalQuestions) * 100)
+  const isLastQuestion = currentQuestion === totalQuestions - 1
   const resultsStyle = {
-    background: `conic-gradient(#8b5cf6 0deg, #8b5cf6 ${percentage * 3.6}deg, #1e293b ${percentage * 3.6}deg)`,
+    background: `conic-gradient(#22c55e 0deg, #22c55e ${percentage * 3.6}deg, #1e293b ${percentage * 3.6}deg)`,
   }
 
   const handleAnswer = (option) => {
@@ -173,7 +174,7 @@ function App() {
   const handleNext = () => {
     if (!activeQuestion) return
 
-    if (currentQuestion === totalQuestions - 1) {
+    if (isLastQuestion) {
       setIsFinished(true)
       return
     }
@@ -241,12 +242,12 @@ function App() {
               </div>
             </div>
 
-            <div className="timer-row">
+            <div className={`timer-row ${timeLeft <= 5 ? 'warning' : ''}`}>
               <span>Time left</span>
-              <strong className={timeLeft <= 5 ? 'danger' : ''}>{timeLeft}s</strong>
+              <strong>{timeLeft}s</strong>
             </div>
 
-            <article className="question-card">
+            <article key={activeQuestion.id} className="question-card">
               <p className="question-text">{activeQuestion.question}</p>
               <div className="options-grid">
                 {activeQuestion.options.map((option) => {
@@ -266,6 +267,7 @@ function App() {
                       type="button"
                       className={optionClass}
                       onClick={() => handleAnswer(option)}
+                      disabled={showExplanation}
                     >
                       {option}
                     </button>
@@ -275,10 +277,10 @@ function App() {
             </article>
 
             {showExplanation && (
-              <section className="explanation-card">
+              <section key={`explanation-${activeQuestion.id}`} className="explanation-card">
                 <p>{activeQuestion.explanation}</p>
                 <button type="button" className="next-button" onClick={handleNext}>
-                  {currentQuestion === totalQuestions - 1 ? 'See Results' : 'Next Question'}
+                  {isLastQuestion ? 'See Results' : 'Next Question'}
                 </button>
               </section>
             )}
