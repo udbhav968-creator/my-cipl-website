@@ -66,6 +66,15 @@ const fallbackQuestions = [
     answer: 'background-color',
     explanation: 'The background-color property sets the background color of an element.',
   },
+  {
+    id: 7,
+    category: 'JavaScript',
+    difficulty: 'Easy',
+    question: 'Which operator is used to check both value and type equality in JavaScript?',
+    options: ['==', '=', '===', '!='],
+    answer: '===',
+    explanation: 'The strict equality operator (===) checks both value and type without coercion.',
+  },
 ]
 
 function App() {
