@@ -33,3 +33,4 @@ A small React quiz application that loads questions from a local API, keeps scor
 - The quiz data is fetched from `/api/questions`.
 - The app includes a fallback question set if the API request fails.
 - Styling and layout are handled in the React components and CSS files in the `src` folder.
+- You can customize questions by editing `fallbackQuestions` in `src/App.jsx`.
