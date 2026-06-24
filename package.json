@@ -1,5 +1,6 @@
 {
   "name": "quiz-game",
+  "description": "An interactive React quiz application with fallback support and score tracking",
   "private": true,
   "version": "0.0.0",
   "type": "module",
