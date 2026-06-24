@@ -57,6 +57,15 @@ const fallbackQuestions = [
     answer: 'POST',
     explanation: 'POST is commonly used to submit new data to create a resource.',
   },
+  {
+    id: 6,
+    category: 'CSS',
+    difficulty: 'Easy',
+    question: 'Which CSS property is used to change the background color of an element?',
+    options: ['color', 'background-color', 'bgcolor', 'border-color'],
+    answer: 'background-color',
+    explanation: 'The background-color property sets the background color of an element.',
+  },
 ]
 
 function App() {
